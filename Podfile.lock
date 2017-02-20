@@ -1,0 +1,51 @@
+PODS:
+  - Alamofire (4.3.0)
+  - AlamofireObjectMapper (4.0.2):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - BubbleTransition (2.0.1)
+  - CircleMenu (2.0.1)
+  - HMSegmentedControl (1.5.3)
+  - IBAnimatable (3.1.2)
+  - IQKeyboardManagerSwift (4.0.8)
+  - Kingfisher (3.4.0)
+  - MXPagerView (0.1.4)
+  - MXParallaxHeader (0.6.0)
+  - MXSegmentedPager (3.2.1):
+    - HMSegmentedControl (~> 1.5.3)
+    - MXPagerView (~> 0.1.4)
+    - MXParallaxHeader (~> 0.6.0)
+  - OAuthSwift (1.1.0)
+  - ObjectMapper (2.2.3)
+  - SwiftyUserDefaults (3.0.0)
+
+DEPENDENCIES:
+  - AlamofireObjectMapper
+  - BubbleTransition
+  - CircleMenu (~> 2.0.1)
+  - IBAnimatable
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - MXSegmentedPager
+  - OAuthSwift
+  - SwiftyUserDefaults
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  AlamofireObjectMapper: 94923a4320bbe52c1d0d462093277a9d6a755a78
+  BubbleTransition: bb24ed389ab672eecf3c87170d0a73f959a8e696
+  CircleMenu: a964e8b03aae58c84b40d5cf64630b62bef077eb
+  HMSegmentedControl: 7c6145afb50f26cec5f3243082f6f12b9f41318f
+  IBAnimatable: 26b74a72df9369d40faab97428477c246b9e42ba
+  IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
+  Kingfisher: 5690cfb3d1bddf3a98d679a3a34d0b7294974ed2
+  MXPagerView: 8798126c2e629695474eb16cbe1a6da6e0b02915
+  MXParallaxHeader: 2997592b8349baf8557ae0e4346f6b17e141de39
+  MXSegmentedPager: 6b6a9fc77887e6fdb09a940f37827466e6d677c8
+  OAuthSwift: 7ec2c62274f6bdc30b1ba3b799c39a6fdcaea0e5
+  ObjectMapper: d3b3de11267f5d971f390eb8d63dd509116a4329
+  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
+
+PODFILE CHECKSUM: a3c9b159a407b90f0e8373ab1ed81562c065adbe
+
+COCOAPODS: 1.1.1
