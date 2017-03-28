@@ -603,11 +603,14 @@
 			baseConfigurationReference = 7DC5943235724FEAC15A77EA /* Pods-MyTestApplication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 65U895WCGE;
 				INFOPLIST_FILE = MyTestApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.ducva.MyTestApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -617,11 +620,14 @@
 			baseConfigurationReference = 1A449CA3538A0C278C0E6B80 /* Pods-MyTestApplication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 65U895WCGE;
 				INFOPLIST_FILE = MyTestApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.ducva.MyTestApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -698,7 +704,7 @@
 				5F6CECC31E5B008100C4AC8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		5F6CECC41E5B008100C4AC8D /* Build configuration list for PBXNativeTarget "MyTestApplication" */ = {
 			isa = XCConfigurationList;
@@ -707,6 +713,7 @@
 				5F6CECC61E5B008100C4AC8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		5F6CECC71E5B008100C4AC8D /* Build configuration list for PBXNativeTarget "MyTestApplicationTests" */ = {
 			isa = XCConfigurationList;
@@ -715,6 +722,7 @@
 				5F6CECC91E5B008100C4AC8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		5F6CECCA1E5B008100C4AC8D /* Build configuration list for PBXNativeTarget "MyTestApplicationUITests" */ = {
 			isa = XCConfigurationList;
@@ -723,6 +731,7 @@
 				5F6CECCC1E5B008100C4AC8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

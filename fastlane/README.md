@@ -1,40 +1,59 @@
 fastlane documentation
 ================
 # Installation
+
+Make sure you have the latest version of the Xcode command line tools installed:
+
 ```
-sudo gem install fastlane
+xcode-select --install
 ```
+
+## Choose your installation method:
+
+<table width="100%" >
+<tr>
+<th width="33%"><a href="http://brew.sh">Homebrew</a></td>
+<th width="33%">Installer Script</td>
+<th width="33%">Rubygems</td>
+</tr>
+<tr>
+<td width="33%" align="center">macOS</td>
+<td width="33%" align="center">macOS</td>
+<td width="33%" align="center">macOS or Linux with Ruby 2.0.0 or above</td>
+</tr>
+<tr>
+<td width="33%"><code>brew cask install fastlane</code></td>
+<td width="33%"><a href="https://download.fastlane.tools">Download the zip file</a>. Then double click on the <code>install</code> script (or run it in a terminal window).</td>
+<td width="33%"><code>sudo gem install fastlane -NV</code></td>
+</tr>
+</table>
 # Available Actions
-### lint
+## iOS
+### ios test
 ```
-fastlane lint
+fastlane ios test
 ```
-Does a static analysis of the project. Configure the options in .swiftlint.yml
-### test
+Runs all the tests
+### ios beta
 ```
-fastlane test
+fastlane ios beta
 ```
-Runs all the unit tests and UI Tests
+Submit a new Beta Build to Apple TestFlight
 
-Configure the .env.default file in this directory before you run the test or build lanes.
+This will also make sure the profile is up to date
+### ios release
+```
+fastlane ios release
+```
+Deploy a new version to the App Store
+### ios metrics
+```
+fastlane ios metrics
+```
 
-Info on the .env files and how to use them can be found here: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Advanced.md#environment-variables
-
-### build
-```
-fastlane build
-```
-Builds the project and produces an .ipa. Pass in the build_numer and version_number as params. Defaults are 1 and 1.0.0 respectively.
-
-Docs on how to pass in parameters are here: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Advanced.md#passing-parameters
-### deploy
-```
-fastlane deploy
-```
-Deploys the built IPA and symbols on HockeyApp
 
 ----
 
-This README.md is auto-generated and will be re-generated every time to run [fastlane](https://fastlane.tools).
-More information about fastlane can be found on [https://fastlane.tools](https://fastlane.tools).
-The documentation of fastlane can be found on [GitHub](https://github.com/fastlane/fastlane/tree/master/fastlane).
+This README.md is auto-generated and will be re-generated every time [fastlane](https://fastlane.tools) is run.
+More information about fastlane can be found on [fastlane.tools](https://fastlane.tools).
+The documentation of fastlane can be found on [docs.fastlane.tools](https://docs.fastlane.tools).
