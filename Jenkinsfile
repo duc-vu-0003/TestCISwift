@@ -47,7 +47,7 @@ pipeline {
                         // It's important to add --info because of SONARJNKNS-281
                         // sh "${scannerHome}/bin/sonar-scanner"
 												ansiColor('xterm') {
-    											sh 'fastlane metrics'
+    											sh '/usr/local/bin/fastlane metrics'
 												}
                     }
                 }
