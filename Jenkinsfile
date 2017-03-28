@@ -39,9 +39,9 @@ pipeline {
         //}
 
         stage('SonarQube analysis') {
-						//environment {
-						//	PATH = '/usr/local/bin'
-					  //}
+						environment {
+							PATH = '$PATH:/usr/local/bin'
+					  }
             steps {
                 script {
                     def scannerHome = tool 'SonarQubeScanner';
