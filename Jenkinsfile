@@ -16,7 +16,7 @@ pipeline {
         stage("Stage Checkout") {
             steps {
                 checkout scm
-                sh 'git submodule update --init'
+                //sh 'git submodule update --init'
             }
         }
 
