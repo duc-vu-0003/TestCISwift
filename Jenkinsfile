@@ -9,7 +9,7 @@ pipeline {
               steps {
                 // send build started notifications
                 sendNotifications 'STARTED'
-								sh 'cd fastlane'
+								//sh 'cd fastlane'
               }
         }
 
@@ -39,9 +39,9 @@ pipeline {
         //}
 
         stage('SonarQube analysis') {
-						environment {
-							PATH = '/usr/local/bin'
-					  }
+						//environment {
+						//	PATH = '/usr/local/bin'
+					  //}
             steps {
                 script {
                     def scannerHome = tool 'SonarQubeScanner';
