@@ -46,7 +46,9 @@ pipeline {
                         // requires SonarQube Scanner for Gradle 2.1+
                         // It's important to add --info because of SONARJNKNS-281
                         // sh "${scannerHome}/bin/sonar-scanner"
-												sh 'fastlane metrics'
+												ansiColor('xterm') {
+    											sh 'fastlane metrics'
+												}
                     }
                 }
             }
