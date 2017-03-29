@@ -38,9 +38,9 @@ pipeline {
         //}
 
         stage('SonarQube analysis') {
-	    environment {
-		PATH = '$PATH:/usr/local/bin'
-	    }
+	    //environment {
+		//PATH = '$PATH:/usr/local/bin'
+	    //}
             steps {
 		//sh 'rvm use $RVM_RUBY_VERSION'
                 script {
