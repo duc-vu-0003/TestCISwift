@@ -37,10 +37,32 @@ pipeline {
         //    }
         //}
 
-        stage('SonarQube analysis') {
-	    //environment {
-		//PATH = '$PATH:/usr/local/bin'
-	    //}
+        stage('Test Coverage Reports') {
+	    environment {
+		PATH = '/Users/Shared/Jenkins/.rvm/gems/ruby-2.4.0@global/bin:/Users/Shared/Jenkins/.rvm/rubies/ruby-2.4.0/bin:$PATH'
+	    }
+            steps {
+		ansiColor('xterm') {
+    			sh 'fastlane metricsGems'
+		}
+            }
+        }
+	    
+	stage('Check Lint') {
+	    environment {
+		PATH = '$PATH:/usr/local/bin'
+	    }
+            steps {
+		ansiColor('xterm') {
+    			sh 'fastlane metricsBrew'
+		}
+            }
+        }
+	    
+	stage('SonarQube analysis') {
+	    environment {
+		PATH = '$PATH:/usr/local/bin'
+	    }
             steps {
 		//sh 'rvm use $RVM_RUBY_VERSION'
                 script {
@@ -50,7 +72,7 @@ pipeline {
                         // It's important to add --info because of SONARJNKNS-281
                         // sh "${scannerHome}/bin/sonar-scanner"
 			ansiColor('xterm') {
-    				sh 'fastlane metrics'
+    				sh 'fastlane sonarRunner'
 			}
                     }
                 }
