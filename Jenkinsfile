@@ -27,7 +27,7 @@ pipeline {
                     def changeLog = getChangelog()
                     echo "Change logs: ${changeLog}"
                 }
-								archive 'reports/, dist/'
+		archive 'reports/, dist/'
             }
         }
 
@@ -42,7 +42,7 @@ pipeline {
 		PATH = '$PATH:/usr/local/bin'
 	    }
             steps {
-		sh 'rvm use $RVM_RUBY_VERSION'
+		//sh 'rvm use $RVM_RUBY_VERSION'
                 script {
                     def scannerHome = tool 'SonarQubeScanner';
                     withSonarQubeEnv('Sonar') {
