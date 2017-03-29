@@ -9,7 +9,6 @@ pipeline {
               steps {
                 // send build started notifications
                 sendNotifications 'STARTED'
-								//sh 'cd fastlane'
               }
         }
 
@@ -39,19 +38,20 @@ pipeline {
         //}
 
         stage('SonarQube analysis') {
-						environment {
-							PATH = '$PATH:/usr/local/bin'
-					  }
+	    environment {
+		PATH = '$PATH:/usr/local/bin'
+	    }
             steps {
+		sh 'rvm use $RVM_RUBY_VERSION'
                 script {
                     def scannerHome = tool 'SonarQubeScanner';
                     withSonarQubeEnv('Sonar') {
                         // requires SonarQube Scanner for Gradle 2.1+
                         // It's important to add --info because of SONARJNKNS-281
                         // sh "${scannerHome}/bin/sonar-scanner"
-												ansiColor('xterm') {
-    											sh 'fastlane metrics'
-												}
+			ansiColor('xterm') {
+    				sh 'fastlane metrics'
+			}
                     }
                 }
             }
