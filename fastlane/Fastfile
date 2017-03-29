@@ -47,11 +47,19 @@ platform :ios do
     # frameit
   end
 
-  lane :metrics do
+  lane :metricsGems do
     scan(scheme: "MyTestApplicationDev", code_coverage: true, derived_data_path: "./DerivedData", output_directory: "./reports")
     slather(cobertura_xml: true, jenkins: true, scheme: "MyTestApplicationDev", build_directory: "./DerivedData", output_directory: "./reports", proj: "./MyTestApplication.xcodeproj")
-    # sh("cd .. && lizard ./[SOURCE_FOLDER] -l swift --xml > ./reports/lizard-report.xml")
+    sonar
+  end
+  
+  lane :metricsBrew do
+    sh("cd .. && lizard ./[SOURCE_FOLDER] -l swift --xml > ./reports/lizard-report.xml")
     swiftlint(output_file: "./reports/swiftlint.txt", ignore_exit_status: true)
+    sonar
+  end
+  
+  lane :sonarRunner do
     sonar
   end
 
